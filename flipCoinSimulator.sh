@@ -15,17 +15,44 @@ fi
 
 hcount=0
 tcount=0
-for((i=0;i<=10;i++))
+for((i=1;i<=10;i++))
 do
 	num=$(($RANDOM%2))
 if [ $num -eq 0 ]
 	then
-		echo "Head"
+#		echo "Head"
      		((hcount++))
 else
-		echo "Tail"
+#		echo "Tail"
 		((tcount++))
 fi
 done
-		echo "Head won : $hcount"
-		echo "Tail won : $tcount"
+#		echo "Head won : $hcount"
+#		echo "Tail won : $tcount"
+
+
+for((i=1;i<=30;i++))
+do
+        num=$(($RANDOM%2))
+if [ $num -eq 0 ]
+then
+                echo "Head"
+                ((hcount++))
+else
+                echo "Tail"
+                ((tcount++))
+fi
+	if [ $hcount -eq 21 ]
+then
+   	 echo "Head is more"
+        elif [ $tcount -eq  21 ]
+then
+	echo "Tail is more"
+
+else
+        	echo "Tie"
+fi
+done
+                echo "Head won : $hcount"
+                echo "Tail won : $tcount"
+
