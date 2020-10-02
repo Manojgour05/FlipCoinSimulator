@@ -3,9 +3,10 @@
 echo "Flip Coin Simulation"
 flipCoin=$(($RANDOM%2))
 
+
 if [ $flipCoin -eq 0 ]
 then
-	echo "Head"
+	echo "Head winner"
 else
-	echo "Tail"
+	echo "Tail winner"
 fi
