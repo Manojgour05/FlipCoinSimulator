@@ -11,7 +11,7 @@ else
 	echo "Tail winner"
 fi
 
-#As a simulator, loop through Multiple times of flipping a coin
+# As a simulator, loop through Multiple times of flipping a coin
 
 hcount=0
 tcount=0
@@ -30,6 +30,8 @@ done
 #		echo "Head won : $hcount"
 #		echo "Tail won : $tcount"
 
+
+# Show if it’s a Win or Tie.
 
 for((i=1;i<=30;i++))
 do
@@ -56,3 +58,15 @@ done
                 echo "Head won : $hcount"
                 echo "Tail won : $tcount"
 
+if [ $hcount -lt $tcount ]
+then
+	p1=$(( $tcount - $hcount ))
+	echo "Tail is won by $p1 point"
+elif [ $tcount -lt $hcount ]
+then
+	p2=$(( $hcount - $tcount ))
+	echo "Head is won by $p2"
+elif [ $hcount -eq $tcount ]
+then
+	echo "it is tie"
+fi
