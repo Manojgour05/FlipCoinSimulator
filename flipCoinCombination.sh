@@ -1,5 +1,4 @@
 #!/bash/bin
-
 echo "Flip Coin Simulation"
 flipCoin=$(($RANDOM%2))
 
